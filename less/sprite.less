@@ -1,0 +1,172 @@
+/*
+LESS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: @icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+@icon-home: x y offset_x offset_y width height total_width total_height image_path name;
+
+At the bottom of this section, we provide information about the spritesheet itself
+@spritesheet: width height image @spritesheet-sprites;
+*/
+@anchor-name: anchor;
+@anchor-x: 693px;
+@anchor-y: 207px;
+@anchor-offset-x: -693px;
+@anchor-offset-y: -207px;
+@anchor-width: 35px;
+@anchor-height: 34px;
+@anchor-total-width: 763px;
+@anchor-total-height: 382px;
+@anchor-image: '../img/sprite.png';
+@anchor: 693px 207px -693px -207px 35px 34px 763px 382px '../img/sprite.png' anchor;
+@arrow-name: arrow;
+@arrow-x: 0px;
+@arrow-y: 251px;
+@arrow-offset-x: 0px;
+@arrow-offset-y: -251px;
+@arrow-width: 274px;
+@arrow-height: 20px;
+@arrow-total-width: 763px;
+@arrow-total-height: 382px;
+@arrow-image: '../img/sprite.png';
+@arrow: 0px 251px 0px -251px 274px 20px 763px 382px '../img/sprite.png' arrow;
+@blockquote-name: blockquote;
+@blockquote-x: 49px;
+@blockquote-y: 271px;
+@blockquote-offset-x: -49px;
+@blockquote-offset-y: -271px;
+@blockquote-width: 38px;
+@blockquote-height: 31px;
+@blockquote-total-width: 763px;
+@blockquote-total-height: 382px;
+@blockquote-image: '../img/sprite.png';
+@blockquote: 49px 271px -49px -271px 38px 31px 763px 382px '../img/sprite.png' blockquote;
+@facebook-name: facebook;
+@facebook-x: 0px;
+@facebook-y: 325px;
+@facebook-offset-x: 0px;
+@facebook-offset-y: -325px;
+@facebook-width: 30px;
+@facebook-height: 57px;
+@facebook-total-width: 763px;
+@facebook-total-height: 382px;
+@facebook-image: '../img/sprite.png';
+@facebook: 0px 325px 0px -325px 30px 57px 763px 382px '../img/sprite.png' facebook;
+@logo-footer-name: logo-footer;
+@logo-footer-x: 418px;
+@logo-footer-y: 0px;
+@logo-footer-offset-x: -418px;
+@logo-footer-offset-y: 0px;
+@logo-footer-width: 345px;
+@logo-footer-height: 207px;
+@logo-footer-total-width: 763px;
+@logo-footer-total-height: 382px;
+@logo-footer-image: '../img/sprite.png';
+@logo-footer: 418px 0px -418px 0px 345px 207px 763px 382px '../img/sprite.png' logo-footer;
+@logo-nav-name: logo-nav;
+@logo-nav-x: 418px;
+@logo-nav-y: 207px;
+@logo-nav-offset-x: -418px;
+@logo-nav-offset-y: -207px;
+@logo-nav-width: 275px;
+@logo-nav-height: 39px;
+@logo-nav-total-width: 763px;
+@logo-nav-total-height: 382px;
+@logo-nav-image: '../img/sprite.png';
+@logo-nav: 418px 207px -418px -207px 275px 39px 763px 382px '../img/sprite.png' logo-nav;
+@logo-name: logo;
+@logo-x: 0px;
+@logo-y: 0px;
+@logo-offset-x: 0px;
+@logo-offset-y: 0px;
+@logo-width: 418px;
+@logo-height: 251px;
+@logo-total-width: 763px;
+@logo-total-height: 382px;
+@logo-image: '../img/sprite.png';
+@logo: 0px 0px 0px 0px 418px 251px 763px 382px '../img/sprite.png' logo;
+@logo2-name: logo2;
+@logo2-x: 0px;
+@logo2-y: 271px;
+@logo2-offset-x: 0px;
+@logo2-offset-y: -271px;
+@logo2-width: 49px;
+@logo2-height: 54px;
+@logo2-total-width: 763px;
+@logo2-total-height: 382px;
+@logo2-image: '../img/sprite.png';
+@logo2: 0px 271px 0px -271px 49px 54px 763px 382px '../img/sprite.png' logo2;
+@prev-name: prev;
+@prev-x: 30px;
+@prev-y: 325px;
+@prev-offset-x: -30px;
+@prev-offset-y: -325px;
+@prev-width: 21px;
+@prev-height: 35px;
+@prev-total-width: 763px;
+@prev-total-height: 382px;
+@prev-image: '../img/sprite.png';
+@prev: 30px 325px -30px -325px 21px 35px 763px 382px '../img/sprite.png' prev;
+@spritesheet-width: 763px;
+@spritesheet-height: 382px;
+@spritesheet-image: '../img/sprite.png';
+@spritesheet-sprites: @anchor @arrow @blockquote @facebook @logo-footer @logo-nav @logo @logo2 @prev;
+@spritesheet: 763px 382px '../img/sprite.png' @spritesheet-sprites;
+
+/*
+The provided classes are intended to be used with the array-like variables
+
+.icon-home {
+  .sprite-width(@icon-home);
+}
+.icon-email {
+  .sprite(@icon-email);
+}
+*/
+.sprite-width(@sprite) {
+  width: extract(@sprite, 5);
+}
+
+.sprite-height(@sprite) {
+  height: extract(@sprite, 6);
+}
+
+.sprite-position(@sprite) {
+  @sprite-offset-x: extract(@sprite, 3);
+  @sprite-offset-y: extract(@sprite, 4);
+  background-position: @sprite-offset-x @sprite-offset-y;
+}
+
+.sprite-image(@sprite) {
+  @sprite-image: extract(@sprite, 9);
+  @sprite-image-bare: ~`"@{sprite-image}".slice(1, -1)`;
+  background-image: url(@sprite-image-bare);
+}
+
+.sprite(@sprite) {
+  .sprite-image(@sprite);
+  .sprite-position(@sprite);
+  .sprite-width(@sprite);
+  .sprite-height(@sprite);
+}
+
+/*
+The `.sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of LESS
+
+This must be run when you have at least 2 sprites.
+  If run with a single sprite, then there will be reference errors.
+
+.sprites(@spritesheet-sprites);
+*/
+.sprites(@sprites, @i: 1) when (@i <= length(@sprites)) {
+  @sprite: extract(@sprites, @i);
+  @sprite-name: extract(@sprite, 10);
+  .@{sprite-name} {
+    .sprite(@sprite);
+  }
+  .sprites(@sprites, @i + 1);
+}

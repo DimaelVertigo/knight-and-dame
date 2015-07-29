@@ -1,0 +1,183 @@
+/*
+LESS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: @icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+@icon-home: x y offset_x offset_y width height total_width total_height image_path name;
+
+At the bottom of this section, we provide information about the spritesheet itself
+@spritesheet: width height image @spritesheet-sprites;
+*/
+@anchor-2x-name: anchor-2x;
+@anchor-2x-x: 1386px;
+@anchor-2x-y: 414px;
+@anchor-2x-offset-x: -1386px;
+@anchor-2x-offset-y: -414px;
+@anchor-2x-width: 70px;
+@anchor-2x-height: 68px;
+@anchor-2x-total-width: 1526px;
+@anchor-2x-total-height: 802px;
+@anchor-2x-image: '../img/sprite-retina.png';
+@anchor-2x: 1386px 414px -1386px -414px 70px 68px 1526px 802px '../img/sprite-retina.png' anchor-2x;
+@arrow-2x-name: arrow-2x;
+@arrow-2x-x: 550px;
+@arrow-2x-y: 502px;
+@arrow-2x-offset-x: -550px;
+@arrow-2x-offset-y: -502px;
+@arrow-2x-width: 548px;
+@arrow-2x-height: 40px;
+@arrow-2x-total-width: 1526px;
+@arrow-2x-total-height: 802px;
+@arrow-2x-image: '../img/sprite-retina.png';
+@arrow-2x: 550px 502px -550px -502px 548px 40px 1526px 802px '../img/sprite-retina.png' arrow-2x;
+@blockquote-2x-name: blockquote-2x;
+@blockquote-2x-x: 98px;
+@blockquote-2x-y: 580px;
+@blockquote-2x-offset-x: -98px;
+@blockquote-2x-offset-y: -580px;
+@blockquote-2x-width: 76px;
+@blockquote-2x-height: 62px;
+@blockquote-2x-total-width: 1526px;
+@blockquote-2x-total-height: 802px;
+@blockquote-2x-image: '../img/sprite-retina.png';
+@blockquote-2x: 98px 580px -98px -580px 76px 62px 1526px 802px '../img/sprite-retina.png' blockquote-2x;
+@facebook-2x-name: facebook-2x;
+@facebook-2x-x: 0px;
+@facebook-2x-y: 688px;
+@facebook-2x-offset-x: 0px;
+@facebook-2x-offset-y: -688px;
+@facebook-2x-width: 60px;
+@facebook-2x-height: 114px;
+@facebook-2x-total-width: 1526px;
+@facebook-2x-total-height: 802px;
+@facebook-2x-image: '../img/sprite-retina.png';
+@facebook-2x: 0px 688px 0px -688px 60px 114px 1526px 802px '../img/sprite-retina.png' facebook-2x;
+@logo-2x-name: logo-2x;
+@logo-2x-x: 0px;
+@logo-2x-y: 0px;
+@logo-2x-offset-x: 0px;
+@logo-2x-offset-y: 0px;
+@logo-2x-width: 836px;
+@logo-2x-height: 502px;
+@logo-2x-total-width: 1526px;
+@logo-2x-total-height: 802px;
+@logo-2x-image: '../img/sprite-retina.png';
+@logo-2x: 0px 0px 0px 0px 836px 502px 1526px 802px '../img/sprite-retina.png' logo-2x;
+@logo-footer-2x-name: logo-footer-2x;
+@logo-footer-2x-x: 836px;
+@logo-footer-2x-y: 0px;
+@logo-footer-2x-offset-x: -836px;
+@logo-footer-2x-offset-y: 0px;
+@logo-footer-2x-width: 690px;
+@logo-footer-2x-height: 414px;
+@logo-footer-2x-total-width: 1526px;
+@logo-footer-2x-total-height: 802px;
+@logo-footer-2x-image: '../img/sprite-retina.png';
+@logo-footer-2x: 836px 0px -836px 0px 690px 414px 1526px 802px '../img/sprite-retina.png' logo-footer-2x;
+@logo-menu-2x-name: logo-menu-2x;
+@logo-menu-2x-x: 836px;
+@logo-menu-2x-y: 414px;
+@logo-menu-2x-offset-x: -836px;
+@logo-menu-2x-offset-y: -414px;
+@logo-menu-2x-width: 550px;
+@logo-menu-2x-height: 78px;
+@logo-menu-2x-total-width: 1526px;
+@logo-menu-2x-total-height: 802px;
+@logo-menu-2x-image: '../img/sprite-retina.png';
+@logo-menu-2x: 836px 414px -836px -414px 550px 78px 1526px 802px '../img/sprite-retina.png' logo-menu-2x;
+@logo-nav-2x-name: logo-nav-2x;
+@logo-nav-2x-x: 0px;
+@logo-nav-2x-y: 502px;
+@logo-nav-2x-offset-x: 0px;
+@logo-nav-2x-offset-y: -502px;
+@logo-nav-2x-width: 550px;
+@logo-nav-2x-height: 78px;
+@logo-nav-2x-total-width: 1526px;
+@logo-nav-2x-total-height: 802px;
+@logo-nav-2x-image: '../img/sprite-retina.png';
+@logo-nav-2x: 0px 502px 0px -502px 550px 78px 1526px 802px '../img/sprite-retina.png' logo-nav-2x;
+@logo2-2x-name: logo2-2x;
+@logo2-2x-x: 0px;
+@logo2-2x-y: 580px;
+@logo2-2x-offset-x: 0px;
+@logo2-2x-offset-y: -580px;
+@logo2-2x-width: 98px;
+@logo2-2x-height: 108px;
+@logo2-2x-total-width: 1526px;
+@logo2-2x-total-height: 802px;
+@logo2-2x-image: '../img/sprite-retina.png';
+@logo2-2x: 0px 580px 0px -580px 98px 108px 1526px 802px '../img/sprite-retina.png' logo2-2x;
+@prev-2x-name: prev-2x;
+@prev-2x-x: 60px;
+@prev-2x-y: 688px;
+@prev-2x-offset-x: -60px;
+@prev-2x-offset-y: -688px;
+@prev-2x-width: 42px;
+@prev-2x-height: 70px;
+@prev-2x-total-width: 1526px;
+@prev-2x-total-height: 802px;
+@prev-2x-image: '../img/sprite-retina.png';
+@prev-2x: 60px 688px -60px -688px 42px 70px 1526px 802px '../img/sprite-retina.png' prev-2x;
+@spritesheet-width: 1526px;
+@spritesheet-height: 802px;
+@spritesheet-image: '../img/sprite-retina.png';
+@spritesheet-sprites: @anchor-2x @arrow-2x @blockquote-2x @facebook-2x @logo-2x @logo-footer-2x @logo-menu-2x @logo-nav-2x @logo2-2x @prev-2x;
+@spritesheet: 1526px 802px '../img/sprite-retina.png' @spritesheet-sprites;
+
+/*
+The provided classes are intended to be used with the array-like variables
+
+.icon-home {
+  .sprite-width(@icon-home);
+}
+.icon-email {
+  .sprite(@icon-email);
+}
+*/
+.sprite-width(@sprite) {
+  width: extract(@sprite, 5);
+}
+
+.sprite-height(@sprite) {
+  height: extract(@sprite, 6);
+}
+
+.sprite-position(@sprite) {
+  @sprite-offset-x: extract(@sprite, 3);
+  @sprite-offset-y: extract(@sprite, 4);
+  background-position: @sprite-offset-x @sprite-offset-y;
+}
+
+.sprite-image(@sprite) {
+  @sprite-image: extract(@sprite, 9);
+  @sprite-image-bare: ~`"@{sprite-image}".slice(1, -1)`;
+  background-image: url(@sprite-image-bare);
+}
+
+.sprite(@sprite) {
+  .sprite-image(@sprite);
+  .sprite-position(@sprite);
+  .sprite-width(@sprite);
+  .sprite-height(@sprite);
+}
+
+/*
+The `.sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of LESS
+
+This must be run when you have at least 2 sprites.
+  If run with a single sprite, then there will be reference errors.
+
+.sprites(@spritesheet-sprites);
+*/
+.sprites(@sprites, @i: 1) when (@i <= length(@sprites)) {
+  @sprite: extract(@sprites, @i);
+  @sprite-name: extract(@sprite, 10);
+  .@{sprite-name} {
+    .sprite(@sprite);
+  }
+  .sprites(@sprites, @i + 1);
+}

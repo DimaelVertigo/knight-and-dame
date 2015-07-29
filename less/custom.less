@@ -36,6 +36,10 @@ input[type="text"], input[type="email"], input[type="number"], input[type="searc
 .content {
 	width: 100%;
 }
+.center-wrapper {
+	display: flex;
+	justify-content: center;
+}
 .btn {
 	outline: none;
 	border-radius: none;
@@ -45,7 +49,12 @@ input[type="text"], input[type="email"], input[type="number"], input[type="searc
 	text-decoration: none;
 	text-align: center;
 	text-transform: uppercase;
-	
+	width: 314px;
+	height: 57px;
+	background-color: transparent;
+	border: 1px solid @black;
+	font: 300 16px/57px 'Muli';
+	color: @brown;
 	&:hover {
 	    cursor: pointer;
 	}
@@ -60,9 +69,90 @@ input[type="text"], input[type="email"], input[type="number"], input[type="searc
 	}
 }
 .title {
-	
+	font: 30px 'Adamina';
+	text-transform: uppercase;
+	&--decorate {
+		color: @black;
+		font: 30px 'Adamina';
+		text-align: center;
+		text-transform: uppercase;
+		position: relative;
+		padding-bottom: 90px;
+		&::before {
+		    content: '';
+		    display: block;
+		    position: absolute;
+		    width: 193px;
+		    height: 1px;
+		    background-color: @brown-light;
+		    top: 51px;
+		    left: 50%;
+		    margin-left: -97px;
+		}
+		&::after {
+		    content: '';
+		    display: block;
+		    position: absolute;
+		    .sprite(@logo2);
+		    top: 80px;
+		    left: 50%;
+		    margin-left: -25px;
+		}
+	}
+	&--preview {
+		color: #fff;
+		font: 20px 'Adamina';
+		text-transform: uppercase;
+		position: relative;
+		.opacity(0);
+		.transition(.5s);
+		&::before {
+		    content: '';
+		    display: block;
+		    position: absolute;
+		    width: 193px;
+		    height: 1px;
+		    background-color: #b19676;
+		    top: 33px;
+		    left: 50%;
+		    margin-left: -97px;
+		    .transition(.3s);
+		    .opacity(0);
+		    transform: scale(0);
+		}
+	}
+	&--arrow {
+		color: @black;
+		font: 30px 'Adamina';
+		text-align: center;
+		text-transform: uppercase;
+		position: relative;
+		padding-bottom: 90px;
+		&::before {
+		    content: 'WHAT WE';
+		    display: block;
+		    position: absolute;
+		    width: 100%;
+		    text-align: center;
+		    color: @brown-light;
+		    font: 300 20px 'Muli';
+		    text-transform: uppercase;
+		    top: -35px;
+		}
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 64px;
+			left: 50%;
+			margin-left: -137px;
+			.sprite(@arrow);
+		}
+	}
 }
-
+.description {
+	font: 300 25px 'Muli';
+}
 .box {
 	width: 150px;
 	height: 150px;
@@ -77,6 +167,9 @@ input[type="text"], input[type="email"], input[type="number"], input[type="searc
 		height: 50px;
 		background-color: #000;
 	}
+}
+.highlighted {
+	color: @brown-light;
 }
 /*-----  End of Custom styles  ------*/
 

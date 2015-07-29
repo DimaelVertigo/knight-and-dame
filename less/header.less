@@ -1,6 +1,118 @@
 /*==============================
 =            HEADER            =
 ==============================*/
+.header-main {
+	background-color: #b3b3b3;
+	min-height: 1080px;
+	height: 100%;
+}
+.aside-navigation {
+	background-color: rgba(64,61,61,.8);
+	height: 100%;
+	min-height: 1080px;
+}
+.logo-main {
+	display: block;
+	margin: 103px auto;
+	.sprite(@logo);
+}
+.aside-navigation {
+	padding-right: 94px;
+	&__navigation {}
+	&__list {
+		display: flex;
+		flex-direction: column;
+	}
+	&__list-item {}
+	&__link {
+		display: block;
+		float: right;
+		color: #fff;
+		font: 20px/50px italic 'Muli';
+		text-decoration: none;
+		text-transform: uppercase;
+		&:hover, &:focus {
+		    color: @brown-light;
+		}
+	}
+}
+.aside-social {
+	margin-top: 78px;
+	&__list {
+		display: flex;
+		flex-direction: column;
+	}
+	&__item {}
+	&__link {
+		display: block;
+		font: 20px/50px 'Muli';
+		text-decoration: none;
+		text-transform: lowercase;
+		color: #fff;
+		float: right;
+		&:hover, &:focus {
+		    color: @brown-light;
+		}
+	}
+}
 
+/* Slim header */
+
+.slim-header {
+	width: 100%;
+	height: 77px;
+	background-color: #fff;
+	box-shadow: 0 5px 5px rgba(3,3,3,.4);
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	z-index: 2;
+	&__logo {
+		display: block;
+		.sprite(@logo-nav);
+	}
+}
+.slim-header-navigation {
+	&__list {
+		display: flex;
+		flex-direction: row;
+		float: left;
+	}
+	&__item {}
+	&__link {
+		font: 14px 'Muli';
+		text-decoration: none;
+		text-align: center;
+		text-transform: uppercase;
+		padding: 0 19px;
+		color: #403d3d;
+		&:hover, &:focus {
+		    color: @brown-light;
+		}
+	}
+	&__social-list {
+		display: flex;
+		flex-direction: row;
+		float: right;
+	}
+	&__social-item {}
+	&__social-link {
+		font: 14px 'Muli';
+		text-decoration: none;
+		text-align: center;
+		text-transform: uppercase;
+		padding: 0 16px;
+		color: #818181;
+		&:hover, &:focus {
+		    color: @brown-light;
+		}
+		&--facebook {}
+		&--instagram {}
+		&--pinterest {}
+		&--email {}
+	}
+}
 /*-----  End of HEADER  ------*/
 

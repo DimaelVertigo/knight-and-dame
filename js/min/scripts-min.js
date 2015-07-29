@@ -1,1 +1,1 @@
-$(document).ready(function(){TweenMax.to(".box",2,{left:600})});
+$(document).ready(function(){$(".carousel-1").owlCarousel({navigation:!0,pagination:!1,navigationText:!1,items:1,autoHeight:!0,nav:!0,navText:!1})});

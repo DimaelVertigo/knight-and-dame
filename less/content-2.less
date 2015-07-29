@@ -1,0 +1,48 @@
+.content-2 {
+	
+}
+.carousel {
+	width: 100%;
+	background-color: #403d3d;
+	color: #fff;
+	&__slide {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		min-height: 401px;
+		padding: 50px 0;
+	}
+	&__icon {
+		color: @brown-light;
+		&::before {
+			font-size: 50px;
+		}
+	}
+	&__text {
+		font: 300 25px italic 'Muli';
+		max-width: 1200px;
+		text-align: center;
+		margin-top: 32px;
+	}
+	&__btn {
+		margin-top: 55px;
+		color: #fff;
+		border-color: #fff;
+	}
+	.owl-prev {
+		position: absolute;
+		top: 50%;
+		left: 4%;
+		margin-top: -17.5px;
+		.sprite(@prev);
+	}
+	.owl-next {
+		position: absolute;
+		top: 50%;
+		right: 4%;
+		margin-top: -17.5px;
+		.sprite(@prev);
+		transform: rotate(180deg);
+	}
+}
