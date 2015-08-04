@@ -1,0 +1,60 @@
+.portfolio {
+	padding-top: 57px;
+	&__title {
+		margin-bottom: 38px;
+	}
+	&__cell {
+		border: 10px solid #e7e8e9;
+		&:nth-child(odd) {
+			border-left: 20px solid #e7e8e9;
+		}
+		&:nth-child(even) {
+			border-right: 20px solid #e7e8e9;
+		}
+		&:nth-child(1), &:nth-child(2) {
+			border-top: 20px solid #e7e8e9;
+		}
+		&:nth-child(7), &:nth-child(8) {
+			border-bottom: 20px solid #e7e8e9;
+		}
+		
+	}
+	&__text-box {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: #fff;
+		height: 464px;
+	}
+	&__cell-title {
+		height: 107px;
+		font: 24px 'Adamina';
+		text-align: center;
+		text-transform: uppercase;
+		position: relative;
+		&::before {
+		    content: '';
+		    display: block;
+		    position: absolute;
+		    width: 185px;
+		    height: 1px;
+		    background-color: #b19676;
+			top: 47px;
+			left: 50%;
+			margin-left: -92px;
+		}
+		&::after {
+		    content: '';
+		    display: block;
+		    position: absolute;
+		    .sprite(@portfolio-arrow);
+		    top: 78px;
+		    left: 50%;
+		    margin-left: -52px;
+		}
+	}
+	&__image {
+		height: 464px;
+		background-color: #b3b3b3;
+	}
+}

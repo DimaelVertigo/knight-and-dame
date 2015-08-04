@@ -60,18 +60,27 @@
 
 .slim-header {
 	width: 100%;
-	height: 77px;
+	padding: 19px 0;
 	background-color: #fff;
 	box-shadow: 0 5px 5px rgba(3,3,3,.4);
 	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
 	position: relative;
-	z-index: 2;
+	z-index: 3;
+	@media @tablet {
+		flex-direction: column;
+	}
+	@media @desktop {
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+	}
+
 	&__logo {
 		display: block;
 		.sprite(@logo-nav);
+		@media @tablet {
+			margin-bottom: 19px;
+		}
 	}
 }
 .slim-header-navigation {

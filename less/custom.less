@@ -10,6 +10,7 @@ html, body {
     height: 100%;
     color: @brand;
     user-select: text; 
+    font: 300 22px 'Muli';
     ::selection {
     	background-color: @brand;
     	color: #fff;
@@ -149,9 +150,29 @@ input[type="text"], input[type="email"], input[type="number"], input[type="searc
 			.sprite(@arrow);
 		}
 	}
+	&--line {
+		position: relative;
+		text-align: center;
+		margin-bottom: 80px;
+		&::before {
+		    content: '';
+		    display: block;
+		    position: absolute;
+		    width: 193px;
+		    height: 1px;
+		    background-color: #b19676;
+		    bottom: -33px;
+		    left: 50%;
+		    margin-left: -96px;
+
+		}
+	}
 }
 .description {
 	font: 300 25px 'Muli';
+	p+p {
+		margin-top: 33px;
+	}
 }
 .box {
 	width: 150px;
