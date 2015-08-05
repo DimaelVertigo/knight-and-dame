@@ -1,0 +1,100 @@
+.investment {
+	&__grid {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	&__cell {
+		height: 713px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+		flex-basis: 50%;
+		&--img {
+			background-color: #bebec0;
+		}
+		&--left {
+			border-right: 10px solid #fff;
+			border-bottom: 20px solid #fff;
+		}
+		&--right {
+			border-left: 10px solid #fff;
+			border-bottom: 20px solid #fff;
+		}
+	}
+	&__cell-title {
+		height: 107px;
+		font: 24px 'Adamina';
+		text-align: center;
+		text-transform: uppercase;
+		position: relative;
+		&--left-arrow {}
+		&--right-arrow {
+			&::after {
+			   transform: rotate(180deg);			    
+			}
+		}
+		&::before {
+		    content: '';
+		    display: block;
+		    position: absolute;
+		    width: 185px;
+		    height: 1px;
+		    background-color: #b19676;
+			top: 47px;
+			left: 50%;
+			margin-left: -92px;
+		}
+		&::after {
+		    content: '';
+		    display: block;
+		    position: absolute;
+		    .sprite(@portfolio-arrow);
+		    top: 78px;
+		    left: 50%;
+		    margin-left: -52px;
+		}
+	}
+	&__price {
+		text-transform: uppercase;
+		margin: 60px 0 35px;
+	}
+	&__text {
+		padding: 0 18%;
+		text-align: center;
+	}
+	&__btn {
+		margin-top: 68px;
+	}
+}
+
+.booking {
+	background-color: #403d3d;
+	color: #fff;
+	padding: 74px 0;
+	margin-bottom: 20px;
+	&__title {
+		font-size: 25px;
+		&::before {
+		    bottom: -20px;
+		}
+	}
+	&__text {
+		text-align: center;
+	}
+	&__buttons {
+		margin-top: 65px;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+	}
+	&__btn {
+		color: #fff;
+		border-color: #fff;
+		&+& {
+			margin-left: 38px;
+		}
+	}
+}

@@ -19,8 +19,39 @@ html, body {
 * {
     box-sizing: border-box;
 }
-input[type="text"], input[type="email"], input[type="number"], input[type="search"], input[type="url"], textarea {
-	.placeholder(@color: @brand)
+input[type="text"], input[type="email"], input[type="tel"], input[type="number"], input[type="search"], input[type="url"], textarea, select {
+	.placeholder(@color: @brand);
+	height: 57px;
+	background-color: transparent;
+	border: 1px solid @brown;
+	padding: 10px;
+	font: 300 22px 'Muli';
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border-radius: 0;
+	width: 100%;
+}
+.custom-select {
+	position: relative;
+	&::before {
+	    content: '';
+	    display: block;
+	    position: absolute;
+	    .sprite(@select);
+	    top: 23px;
+	    right: 17px;
+	}
+	&::after {
+	    content: '';
+	    display: block;
+	    position: absolute;
+	    width: 1px;
+	    height: 57px;
+	    background-color: @brown;
+	    top: 0;
+	    right: 52px;
+	}
 }
 .f_clear {
     height: auto;
